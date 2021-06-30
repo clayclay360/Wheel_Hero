@@ -1,0 +1,379 @@
+fileFormatVersion: 2
+guid: 58c2d9c7acc4b4743b74e7f9ca956e2f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7404973479647667097
+    second: head
+  - first:
+      213: 2939479005016762658
+    second: arm_L
+  - first:
+      213: 4428102216248052584
+    second: body
+  - first:
+      213: 3570872567493917260
+    second: arm_R
+  - first:
+      213: 4916584987006864410
+    second: arm_str_L
+  - first:
+      213: 586302148960076614
+    second: arm_str_R
+  - first:
+      213: 7918396058709502451
+    second: leg_L
+  - first:
+      213: -5967383555865458681
+    second: leg_R
+  - first:
+      213: -3874340202567461847
+    second: wheel_trampoline
+  - first:
+      213: 1088731415900696804
+    second: wheel
+  - first:
+      213: 6893013726450301960
+    second: wheel_hero_character_10
+  - first:
+      213: -8166821101987867277
+    second: wheel_hero_character_11
+  - first:
+      213: 8226901249341674998
+    second: wheel_hero_character_12
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: head
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 442
+        width: 197
+        height: 229
+      alignment: 9
+      pivot: {x: 0.48856434, y: 0.020563783}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99366918520c3c660800000000000000
+      internalID: 7404973479647667097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arm_L
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 293
+        width: 53
+        height: 74
+      alignment: 9
+      pivot: {x: 0.23305109, y: 0.9571995}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2292ebeb4902bc820800000000000000
+      internalID: 2939479005016762658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: body
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 283
+        width: 83
+        height: 123
+      alignment: 9
+      pivot: {x: 0.4885967, y: 0.046000905}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86bc59c2187c37d30800000000000000
+      internalID: 4428102216248052584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arm_R
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 331
+        width: 73
+        height: 43
+      alignment: 9
+      pivot: {x: 0.07024143, y: 0.90055525}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4a79ab4ea94e8130800000000000000
+      internalID: 3570872567493917260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arm_str_L
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 278
+        width: 25
+        height: 93
+      alignment: 9
+      pivot: {x: 0.48606446, y: 0.9682909}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1c009a1ff73b3440800000000000000
+      internalID: 4916584987006864410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: arm_str_R
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 277
+        width: 25
+        height: 93
+      alignment: 9
+      pivot: {x: 0.513938, y: 0.9682909}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64340d7b2b6f22800800000000000000
+      internalID: 586302148960076614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leg_L
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 196
+        width: 39
+        height: 65
+      alignment: 9
+      pivot: {x: 0.27576426, y: 0.9484699}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f9ab3e034bc3ed60800000000000000
+      internalID: 7918396058709502451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leg_R
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 199
+        width: 39
+        height: 65
+      alignment: 9
+      pivot: {x: 0.2783039, y: 0.9560594}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 708c122c5489f2da0800000000000000
+      internalID: -5967383555865458681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wheel_trampoline
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 22
+        width: 299
+        height: 217
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92493f6ec149b3ac0800000000000000
+      internalID: -3874340202567461847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wheel
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 18
+        width: 147
+        height: 147
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e0b1945473fb1f00800000000000000
+      internalID: 1088731415900696804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

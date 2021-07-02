@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Ground
   - Wheel
+  - WheelStack
+  - Bullet
+  - Plasma
+  - Dead_Bullet
   layers:
   - Default
   - TransparentFX
@@ -15,7 +19,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Environment
   - 
   - 
   - 

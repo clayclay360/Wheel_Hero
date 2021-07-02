@@ -6,6 +6,27 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/scenes/test_area.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/scenes/main_menu.unity
+    guid: 1a59a40cc8f004a4690d9af226916b42
+  - enabled: 1
+    path: Assets/scenes/turtorial_1.unity
+    guid: fd85e56ea8c21ad4fbc21b18a1521adc
+  - enabled: 1
+    path: Assets/scenes/turtorial_2.unity
+    guid: c4b6d8bc342adda4d9521a7137fdc43a
+  - enabled: 1
+    path: Assets/scenes/turtorial_3.unity
+    guid: 76a280e249471c34a97db93035a75fae
+  - enabled: 1
+    path: Assets/scenes/level_1.unity
+    guid: 7190f9220320ca74fb808cf09ebf1860
+  - enabled: 1
+    path: Assets/scenes/level_2.unity
+    guid: 26fe5a2319bf01549881131f809679ea
+  - enabled: 1
+    path: Assets/scenes/level_3.unity
+    guid: 8f5159800b99d384e8693829af7846eb
+  - enabled: 1
+    path: Assets/scenes/last_scene.unity
+    guid: 29023fe9474eca24583884aba836c363
   m_configObjects: {}

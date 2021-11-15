@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class player_controller : MonoBehaviour
 {
-
+    //variables
     [Header("Player Info:")]
     public float gravity;
     public float run_speed;
@@ -32,13 +32,16 @@ public class player_controller : MonoBehaviour
     private Rigidbody2D rb;
     private bool wheel_equipped, unequipped, shielding, grounded, drop_available, died;
     private float taps;
+    
+    //get components
     void Start()
     {
         wheel_col.GetComponent<Collider2D>();
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
-
+    
+    //if not died, allow the player to keep moving
     void FixedUpdate()
     {
         if(!died)
@@ -53,7 +56,9 @@ public class player_controller : MonoBehaviour
         animator.SetBool("unequipped", unequipped);
         animator.SetBool("shielding", shielding);
     }
-
+    
+    /*depending on the keys the player presses, they will be allowed to equip and unequip their wheel (E), 
+    jump (W), sheild themselves (right mouse), throw the wheel (left mouse)*/
     private void get_input()
     {
         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space))
@@ -111,6 +116,8 @@ public class player_controller : MonoBehaviour
         }
     }
 
+    /*allow the player to move left and right across the screen by the horizontal and vertical axis input. 
+    change the players scale depending on which direction their facing*/
     private void movement()
     {
         float x_input = Input.GetAxisRaw("Horizontal");
@@ -136,6 +143,7 @@ public class player_controller : MonoBehaviour
         rb.velocity = new Vector2(speed, gravity);
     }
 
+    //play the equip animation based on whether the variable wheel equipped is true or false
     private void weapon()
     {
         animator.SetBool("wheel_equipped", wheel_equipped);
@@ -146,13 +154,15 @@ public class player_controller : MonoBehaviour
         }
     }
 
+    //instantiate a wheel, throwing/forcing it in the direction of the player's mouse
     public void throw_wheel()
     {
         GameObject wheel = Instantiate(wheel_prefab, wheel_spawn_transform.position, Quaternion.identity);
         Rigidbody2D rb = wheel.GetComponent<Rigidbody2D>();
         rb.AddForce(dir * throwing_force);
     }
-
+    
+    //instatiate the stack of wheel under the player, destroy it in a certain amount of time
     private void drop_wheels()
     {
         GameObject wheel_stack = Instantiate(wheel_stack_prefab, wheel_stack_spawn_transform.position, Quaternion.identity);
@@ -161,18 +171,21 @@ public class player_controller : MonoBehaviour
         Destroy(wheel_stack, destory_time);
         Invoke("add_wheel", destory_time);
     }
-
+    
+    //add one to wheels stored variable
     private void add_wheel()
     {
         wheels_stored += 1;
     }
 
+    //wait for a specific amount of time, then drop available equalls false
     private IEnumerator drop_wheels_timer()
     {
         yield return new WaitForSeconds(drop_time);
         drop_available = false;
     }
 
+    //on the player, make a raycast facing down, if the ray hits a collider tagged "Ground" then grounded, else not grounded
     private void check_ground()
     {
         Debug.DrawRay(line_cast_start.position, line_cast_end.position, Color.yellow);
@@ -190,6 +203,7 @@ public class player_controller : MonoBehaviour
         }
     }
 
+    //get the direction of the mouse and have the player look toward it
     private void look_at_mouse()
     {
         Vector3 mouse_pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -198,7 +212,8 @@ public class player_controller : MonoBehaviour
         Vector2 dir = new Vector2(transform.position.x - mouse_pos.x, mouse_pos.y - transform.position.y);
         target.transform.up = -dir;
     }
-
+    
+    //if dead, play the death animation and freeze the player's rigidbody
     public void death()
     {
         died = true;
@@ -211,13 +226,10 @@ public class player_controller : MonoBehaviour
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
     }
 
+    /*if player hit another collider tagged "Wheel" and is unequpped, then equip the player with a whell and destory 
+    the wheel that collided with the player, play the cathing animation. if collider tagged with "WheelStack" add upward force to the player*/
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //if (collision.collider.tag == "Ground")
-        //{
-        //    grounded = true;
-        //}
-
         if (collision.gameObject.tag == "Wheel" && unequipped)
         {
             unequipped = false;

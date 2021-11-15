@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class turret_controller : MonoBehaviour
 {
+    //variables
     [Header("Turret Info:")]
     public float fire_rate;
     public int max_ammo;
@@ -18,13 +19,16 @@ public class turret_controller : MonoBehaviour
 
     private GameObject target;
     private bool fire_ready, died, death_counted;
+    
+    //get components
     void Start()
     {
         fire_ready = true;
         target = GameObject.FindGameObjectWithTag("Player");
         head.GetComponent<GameObject>();
     }
-
+    
+    //if not dead and player within distance, look at the toward the direction of the player, if ready to fire then run coroutine shoot bullet
     void Update()
     {
         if(Vector2.Distance(target.transform.position,transform.position) < range && !died)
@@ -57,7 +61,8 @@ public class turret_controller : MonoBehaviour
 
         death();
     }
-
+    
+    //shoot three bullets toward the direction of the player the player. wait until reload time is finished, then fire is ready
     IEnumerator shoot_bullets()
     {
         int ammo = max_ammo;
@@ -71,13 +76,14 @@ public class turret_controller : MonoBehaviour
 
             Vector2 dir = target.transform.position - transform.position;
             dir.Normalize();
-            rb.AddForce(/*target.transform.position*/ dir * fire_power);
+            rb.AddForce(dir * fire_power);
         }
 
         yield return new WaitForSeconds(reload_time);
         fire_ready = true;
     }
 
+    //if dead move the head of the turret's z rotation down
     private void death()
     {
         if (died)
@@ -87,6 +93,7 @@ public class turret_controller : MonoBehaviour
         }
     }
 
+    //if hit by the wheel, die and decrease the # of enemies in the game manager
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Wheel")

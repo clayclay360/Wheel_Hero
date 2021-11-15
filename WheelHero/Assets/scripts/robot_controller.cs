@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class robot_controller : MonoBehaviour
 {
+    //variables
     [Header("Robot Info:")]
     public float reload_time;
     public int max_ammo;
@@ -20,7 +21,7 @@ public class robot_controller : MonoBehaviour
     private Rigidbody2D rb;
     private bool fire_ready, died, death_counted, player_insight;
 
-
+    //get components
     void Start()
     {
         fire_ready = true;
@@ -39,6 +40,7 @@ public class robot_controller : MonoBehaviour
         check_weapon();
     }
 
+    //if player is in sight and range and ready to fire,then play the fire animation and reload timer coroutine.
     private void check_weapon()
     {
         if (Vector2.Distance(target.transform.position, transform.position) < range && fire_ready && player_insight)
@@ -48,7 +50,8 @@ public class robot_controller : MonoBehaviour
             fire_ready = false;
         }
     }
-
+    
+    //shoot a bullet forward
     public void shoot_bullets()
     {
         Vector2 direction = target.transform.position - muzzle.transform.position;
@@ -57,6 +60,7 @@ public class robot_controller : MonoBehaviour
         rb.AddForce((direction + offset) * fire_force);
     }
 
+    //change the robots z rotation and change it's alpha over a certain amount of time, then destroy robot
     private void death()
     {
         if (died)
@@ -77,12 +81,14 @@ public class robot_controller : MonoBehaviour
         }
     }
 
+    //wait a specific amount of time, then ready to fire
     IEnumerator reload_timer()
     {
         yield return new WaitForSeconds(reload_time);
         fire_ready = true;
     }
 
+    //if the trigger collider hit's another collider tagged "Player" or "Wheel" then player is insight, else player is not in sight
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Wheel")
@@ -95,6 +101,7 @@ public class robot_controller : MonoBehaviour
         }
     }
 
+    //if hit by the wheel, then die and decrease the # of eneimes to the game manager
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Wheel")
